@@ -64,3 +64,42 @@ Other imperative Q languages include Quantum pseudocode, Q|SI>, Q language, qGCL
 ![functional-quantum-language jpg](https://user-images.githubusercontent.com/13979489/173781791-2b451bfe-944c-4d9c-a0ef-6a27fe9d2208.png)
 
 
+
+
+
+
+
+
+## QCL - PROGRAMMING LANGUAGE
+
+
+Quantum Programming Language
+Quantum Programming Language is a programming language, which can be used to write programmes for quantum computer.
+
+Since every quantum machine has to be controlled by classical device, existing quantum programming languages incorporate classical control structures such as loops and conditional execution and allow to operate on classical and quantum data.
+
+Imperative quantum programming
+Quantum pseudocode
+Quantum pseudocode proposed by E. Knill is the first formalised language for description of quantum algorithms was introduced and, moreover, it was tightly connected with model of quantum machine called Quantum Random Access Machine (QRAM).
+
+
+Quantum Computing Language
+QCL (Quantum Computer Language) is the most advanced implemented quantum programming language. Its syntax resambles syntax of the C programming language and classical data types are similar to data types in C.
+
+The basic built-in quantum data type in QCL is qreg (quantum register). It can be interpreted as a an array of qubits (quantum bits).
+
+qureg x1[2]; // 2-qubit quantum register x1 qureg x2[2]; // 2-qubit quantum register x2 H(x1); // Hadamard operation on x1 H(x2[1]); // Hadamard operation on the first qubit of the register x1
+
+Since qcl interpreter uses qlib simulation library, it is possible to observe internal state of the quantum machine during execution of the quantum programme.
+
+qcl&gt; dump : STATE: 4 / 32 qubits allocated, 28 / 32 qubits free 0.35355 |0&gt; + 0.35355 |1&gt; + 0.35355 |2&gt; + 0.35355 |3&gt; + 0.35355 |8&gt; + 0.35355 |9&gt; + 0.35355 |10&gt; + 0.35355 |11&gt;
+
+Note that dump operation is diffrent from measurement, since it does not influence the state of the quantum machine and can be realised only using simulator.
+
+QCL standard library provides standard quantum operators used in quantum algorithms such as:
+
+controlled-not with many target qubits,
+
+Hadamard operation on many qubits,
+
+parse and controlled phase.
